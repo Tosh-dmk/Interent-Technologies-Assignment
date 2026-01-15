@@ -2,27 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Manga vs Manhwa</title>
+    <title>Skills Form</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <div class="container">
-      <h1>Select what you like</h1>
+      <h1>User Skills Form</h1>
 
-      <label>
-        <input type="checkbox" id="manga" />
-        Manga
-      </label>
+      <form onsubmit="showResult(event)">
+        <label>
+          Name:
+          <input type="text" id="name" required />
+        </label>
 
-      <label>
-        <input type="checkbox" id="manhwa" />
-        Manhwa
-      </label>
+        <label>
+          Age:
+          <input type="number" id="age" required />
+        </label>
 
-      <button onclick="showResult()">Submit</button>
+        <p>Skills:</p>
 
-      <div id="result"></div>
+        <label>
+          <input type="checkbox" id="python" />
+          Python
+        </label>
+
+        <label>
+          <input type="checkbox" id="javascript" />
+          JavaScript
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p id="result"></p>
     </div>
 
     <script src="script.js"></script>
