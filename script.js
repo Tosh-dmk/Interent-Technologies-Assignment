@@ -1,15 +1,23 @@
-function showResult() {
-    const manga = document.getElementById("manga").checked;
-    const manhwa = document.getElementById("manhwa").checked;
-    const result = document.getElementById("result");
+function showResult(event) {
+    event.preventDefault();
 
-    if (manga && manhwa) {
-        result.textContent = "You like both manhwa and manga.";
-    } else if (manga) {
-        result.textContent = "You like manga.";
-    } else if (manhwa) {
-        result.textContent = "You like manhwa.";
+    const name = document.getElementById("name").value;
+    const age = document.getElementById("age").value;
+    const python = document.getElementById("python").checked;
+    const javascript = document.getElementById("javascript").checked;
+
+    let skills = "";
+
+    if (python && javascript) {
+        skills = "Python and JavaScript";
+    } else if (python) {
+        skills = "Python";
+    } else if (javascript) {
+        skills = "JavaScript";
     } else {
-        result.textContent = "Please select at least one option.";
+        skills = "no programming languages";
     }
+
+    document.getElementById("result").textContent =
+        `My name is ${name}, I am ${age} years old and can code in ${skills}.`;
 }
