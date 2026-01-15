@@ -9,31 +9,25 @@ body {
 
 .container {
     background: white;
-    padding: 20px 30px;
+    padding: 25px;
     border-radius: 10px;
+    width: 300px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-h1 {
-    margin-bottom: 15px;
 }
 
 label {
     display: block;
-    margin: 10px 0;
-    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 button {
-    margin-top: 15px;
-    padding: 8px 15px;
-    font-size: 16px;
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
     cursor: pointer;
 }
 
 #result {
-    margin-top: 20px;
-    font-size: 18px;
+    margin-top: 15px;
     font-weight: bold;
 }
